@@ -1,0 +1,124 @@
+import React from 'react'; import { Card, CardContent } from '@/components/ui/card'; import { Button } from '@/components/ui/button'; import { HeartPulse, Activity, Calendar } from 'lucide-react'; import { motion } from 'framer-motion';
+
+const PremiumHealthWebsite = () => { return ( <div className='min-h-screen bg-gradient-to-br from-green-200 to-blue-300 p-8 flex flex-col items-center'> <motion.h1 className='text-4xl font-bold mb-8 text-gray-800' initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} > Premium Health & Wellness </motion.h1>
+
+<div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl'>
+    {[{
+      icon: <HeartPulse className='text-red-500' size={36} />, 
+      title: 'Heart Health', 
+      description: 'Monitor and maintain your heart health effectively.'
+    }, {
+      icon: <Activity className='text-blue-500' size={36} />, 
+      title: 'Daily Activity', 
+      description: 'Track your daily activity and stay motivated.'
+    }, {
+      icon: <Calendar className='text-green-500' size={36} />, 
+      title: 'Health Plans', 
+      description: 'Personalized plans for a healthier life.'
+    }].map((item, index) => (
+      <Card key={index} className='bg-white shadow-lg p-4 rounded-2xl'>
+        <CardContent className='flex flex-col items-center'>
+          <div className='mb-4'>{item.icon}</div>
+          <h2 className='text-xl font-semibold text-gray-700 mb-2'>{item.title}</h2>
+          <p className='text-gray-500 mb-4 text-center'>{item.description}</p>
+          <Button variant='default'>Learn More</Button>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
+
+); };
+
+export default PremiumHealthWebsite;
+
+import React from 'react'; import { Card, CardContent } from '@/components/ui/card'; import { Button } from '@/components/ui/button'; import { HeartPulse, Activity, Calendar, Lightbulb } from 'lucide-react'; import { motion } from 'framer-motion';
+
+const images = { heart: '/images/heart.jpg', activity: '/images/activity.jpg', plans: '/images/plans.jpg', tips: '/images/tips.jpg' };
+
+const PremiumHealthWebsite = () => { return ( <div className='min-h-screen bg-gradient-to-br from-green-200 to-blue-300 p-8 flex flex-col items-center'> <motion.h1 className='text-4xl font-bold mb-8 text-gray-800' initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} > Premium Health & Wellness </motion.h1>
+
+<div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl'>
+    {[{
+      icon: <HeartPulse className='text-red-500' size={36} />, 
+      title: 'Heart Health', 
+      description: 'Monitor and maintain your heart health effectively.',
+      image: images.heart
+    }, {
+      icon: <Activity className='text-blue-500' size={36} />, 
+      title: 'Daily Activity', 
+      description: 'Track your daily activity and stay motivated.',
+      image: images.activity
+    }, {
+      icon: <Calendar className='text-green-500' size={36} />, 
+      title: 'Health Plans', 
+      description: 'Personalized plans for a healthier life.',
+      image: images.plans
+    }, {
+      icon: <Lightbulb className='text-yellow-500' size={36} />, 
+      title: 'Health Tips', 
+      description: 'Get daily health tips to stay active and vibrant.',
+      image: images.tips
+    }].map((item, index) => (
+      <Card key={index} className='bg-white shadow-lg p-4 rounded-2xl'>
+        <CardContent className='flex flex-col items-center'>
+          <img src={item.image} alt={item.title} className='w-full h-32 object-cover rounded-lg mb-4' />
+          <div className='mb-4'>{item.icon}</div>
+          <h2 className='text-xl font-semibold text-gray-700 mb-2'>{item.title}</h2>
+          <p className='text-gray-500 mb-4 text-center'>{item.description}</p>
+          <Button variant='default'>Learn More</Button>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
+
+); };
+
+export default PremiumHealthWebsite;
+
+import React from 'react'; import { Card, CardContent } from '@/components/ui/card'; import { Button } from '@/components/ui/button'; import { HeartPulse, Activity, Calendar, Lightbulb } from 'lucide-react'; import { motion } from 'framer-motion';
+
+const images = { heart: '/images/heart.jpg', activity: '/images/activity.jpg', plans: '/images/plans.jpg', tips: '/images/tips.jpg' };
+
+const PremiumHealthWebsite = () => { return ( <div className='min-h-screen bg-gradient-to-br from-green-200 to-blue-300 p-8 flex flex-col items-center'> <motion.h1 className='text-4xl font-bold mb-8 text-gray-800' initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} > Premium Health & Wellness </motion.h1>
+
+<div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl'>
+    {[{
+      icon: <HeartPulse className='text-red-500' size={36} />, 
+      title: 'Heart Health', 
+      description: 'Monitor and maintain your heart health effectively.',
+      image: images.heart
+    }, {
+      icon: <Activity className='text-blue-500' size={36} />, 
+      title: 'Daily Activity', 
+      description: 'Track your daily activity and stay motivated.',
+      image: images.activity
+    }, {
+      icon: <Calendar className='text-green-500' size={36} />, 
+      title: 'Health Plans', 
+      description: 'Personalized plans for a healthier life.',
+      image: images.plans
+    }, {
+      icon: <Lightbulb className='text-yellow-500' size={36} />, 
+      title: 'Health Tips', 
+      description: 'Get daily health tips to stay active and vibrant.',
+      image: images.tips
+    }].map((item, index) => (
+      <Card key={index} className='bg-white shadow-lg p-4 rounded-2xl'>
+        <CardContent className='flex flex-col items-center'>
+          <img src={item.image} alt={item.title} className='w-full h-32 object-cover rounded-lg mb-4' />
+          <div className='mb-4'>{item.icon}</div>
+          <h2 className='text-xl font-semibold text-gray-700 mb-2'>{item.title}</h2>
+          <p className='text-gray-500 mb-4 text-center'>{item.description}</p>
+          <Button variant='default'>Learn More</Button>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
+
+); };
+
+export default PremiumHealthWebsite;
+
